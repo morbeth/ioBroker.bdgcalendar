@@ -1,0 +1,78 @@
+{
+	"common": {
+		"name": "bdg_muell",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "BDG - Müllkalender",
+		"titleLang": {
+			"en": "BDG - Müllkalender",
+			"de": "BDG - Müllkalender",
+			"ru": "BDG - Müllkalender",
+			"pt": "BDG - Müllkalender",
+			"nl": "BDG - Müllkalender",
+			"fr": "BDG - Müllkalender",
+			"it": "BDG - Müllkalender",
+			"es": "BDG - Müllkalender",
+			"pl": "BDG - Müllkalender",
+			"zh-cn": "BDG-Müllkalender"
+		},
+		"desc": {
+			"en": "BDG Barnim Müllkalender",
+			"de": "BDG Barnim Müllkalender",
+			"ru": "BDG Barnim Müllkalender",
+			"pt": "BDG Barnim Müllkalender",
+			"nl": "BDG Barnim Müllkalender",
+			"fr": "BDG Barnim Müllkalender",
+			"it": "BDG Barnim Müllkalender",
+			"es": "BDG Barnim Müllkalender",
+			"pl": "BDG Barnim Müllkalender",
+			"zh-cn": "BDG BarnimMüllkalender"
+		},
+		"authors": [
+			"Gunnar Neuendorf <gunnar@morbeth.de>"
+		],
+		"keywords": [
+			"iobroker",
+			"müll",
+			"adapter"
+		],
+		"license": "Unlicense",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "bdg_muell.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/morbeth/ioBroker.bdg_muell/master/admin/bdg_muell.png",
+		"readme": "https://github.com/morbeth/ioBroker.bdg_muell/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "date-and-time",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=1.4.2"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
