@@ -18,7 +18,6 @@ class BdgMuell extends utils.Adapter {
 	 */
 	constructor(options) {
 		super({
-			...options,
 			name: 'bdg_muell',
 		});
 		this.on('ready', this.onReady.bind(this));
@@ -36,8 +35,19 @@ class BdgMuell extends utils.Adapter {
 
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
-		this.log.info('config option1: ' + this.config.option1);
-		this.log.info('config option2: ' + this.config.option2);
+		this.log.info('config city_id: ' + this.config.city_id);
+		this.log.info('config area_id: ' + this.config.area_id);
+
+
+		request(
+                        {
+                                url: "https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3",
+                                json: true
+                        },
+                        function(error, response, content) {
+                                this.log.debug("request done");
+                        }
+                );
 
 		/*
 		For every state in the system there has to be also an object of type state
@@ -54,6 +64,18 @@ class BdgMuell extends utils.Adapter {
 				write: true,
 			},
 			native: {},
+		});
+
+		await this.setObjectAsync('hausmuell', {
+			type: "state",
+			common: {
+				name: "hausmuell",
+				type: "text",
+				role: "indicator",
+				read: true,
+				write: true
+			},
+			native: {}
 		});
 
 		// in this template all states changes inside the adapters namespace are subscribed
