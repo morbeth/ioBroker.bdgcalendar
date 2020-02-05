@@ -1,5 +1,5 @@
 ![Logo](admin/bdg_muell.png)
-# ioBroker.bdg_muell
+# ioBroker.bdgcalendar
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.bdg_muell.svg)](https://www.npmjs.com/package/iobroker.bdg_muell)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.bdg_muell.svg)](https://www.npmjs.com/package/iobroker.bdg_muell)
