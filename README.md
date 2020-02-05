@@ -10,7 +10,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.bdg_muell.png?downloads=true)](https://nodei.co/npm/iobroker.bdg_muell/)
 
-## bdg_muell adapter for ioBroker
+## bdgcalendar adapter for ioBroker
 
 BDG Barnim Müllkalender
 
