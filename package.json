@@ -7,7 +7,7 @@
     "email": "gunnar@morbeth.de"
   },
   "homepage": "https://github.com/morbeth/ioBroker.bdg_muell",
-  "license": "Unlicense",
+  "license": "MIT",
   "keywords": [
     "iobroker",
     "müll",
