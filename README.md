@@ -8,7 +8,7 @@
 [![Dependency Status](https://img.shields.io/david/morbeth/iobroker.bdg_muell.svg)](https://david-dm.org/morbeth/iobroker.bdg_muell)
 [![Known Vulnerabilities](https://snyk.io/test/github/morbeth/ioBroker.bdg_muell/badge.svg)](https://snyk.io/test/github/morbeth/ioBroker.bdg_muell)
 
-[![NPM](https://nodei.co/npm/iobroker.bdg_muell.png?downloads=true)](https://nodei.co/npm/iobroker.bdg_muell/)
+[![NPM](https://nodei.co/npm/iobroker.bdg_muell.png?downloads=true)](https://nodei.co/npm/iobroker.bdgcalendar/)
 
 ## bdgcalendar adapter for ioBroker
 
