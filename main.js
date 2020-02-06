@@ -152,6 +152,7 @@ class BdgCalendar extends utils.Adapter {
 			}
 		);
 		this.log.info(result_bdg);
+		console.info(result_bdg);
 	}
 
 	// /**
