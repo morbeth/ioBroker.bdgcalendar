@@ -10,6 +10,8 @@ const utils = require('@iobroker/adapter-core');
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
+const request = require("request");
+
 
 class BdgCalendar extends utils.Adapter {
 
@@ -39,15 +41,15 @@ class BdgCalendar extends utils.Adapter {
 		this.log.info('config area_id: ' + this.config.area_id);
 
 
-		new Request(
-                        {
-                                url: "https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3",
-                                json: true
-                        },
-                        function(error, response, content) {
-                                this.log.debug("request done");
-                        }
-                );
+		request(
+			{
+				url: 'https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
+				json: true
+			},
+			function(error, response, content) {
+				console.log('request done');
+			}
+		);
 
 		/*
 		For every state in the system there has to be also an object of type state
