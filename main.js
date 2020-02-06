@@ -42,17 +42,6 @@ class BdgCalendar extends utils.Adapter {
 		this.log.info('config city_id: ' + this.config.city_id);
 		this.log.info('config area_id: ' + this.config.area_id);
 
-		await request('https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
-			{
-				json: true,
-				function(error, response, content) {
-					console.info('request done');
-					this.log.info('request done');
-				}
-			}
-		);
-
-
 		/*
 		For every state in the system there has to be also an object of type state
 		Here a simple template for a boolean variable named "testVariable"
@@ -84,7 +73,6 @@ class BdgCalendar extends utils.Adapter {
 
 		// in this template all states changes inside the adapters namespace are subscribed
 		this.subscribeStates('*');
-
 		/*
 		setState examples
 		you will notice that each setState will cause the stateChange event to fire (because of above subscribeStates cmd)
@@ -105,6 +93,8 @@ class BdgCalendar extends utils.Adapter {
 
 		result = await this.checkGroupAsync('admin', 'admin');
 		this.log.info('check group user admin group admin: ' + result);
+
+		this.read();
 	}
 
 	/**
@@ -148,6 +138,19 @@ class BdgCalendar extends utils.Adapter {
 			// The state was deleted
 			this.log.info(`state ${id} deleted`);
 		}
+	}
+
+	read() {
+		this.log.info('read wurde aufgerufen');
+		request('https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
+			{
+				json: true,
+				function(error, response, content) {
+					console.info('request done');
+					this.log.info('request done');
+				}
+			}
+		);
 	}
 
 	// /**
