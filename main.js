@@ -10,10 +10,11 @@ const utils = require('@iobroker/adapter-core');
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
-const request = require("request");
+const request = require('request');
 
 
 class BdgCalendar extends utils.Adapter {
+
 
 	/**
 	 * @param {Partial<ioBroker.AdapterOptions>} [options={}]
@@ -47,7 +48,7 @@ class BdgCalendar extends utils.Adapter {
 				json: true
 			},
 			function(error, response, content) {
-				console.log('request done');
+				this.log.info('request done');
 			}
 		);
 
