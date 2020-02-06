@@ -28,6 +28,7 @@ class BdgCalendar extends utils.Adapter {
 		this.on('stateChange', this.onStateChange.bind(this));
 		// this.on('message', this.onMessage.bind(this));
 		this.on('unload', this.onUnload.bind(this));
+
 	}
 
 	/**
@@ -41,16 +42,15 @@ class BdgCalendar extends utils.Adapter {
 		this.log.info('config city_id: ' + this.config.city_id);
 		this.log.info('config area_id: ' + this.config.area_id);
 
-
-		request(
+		request('https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
 			{
-				url: 'https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
-				json: true
-			},
-			function(error, response, content) {
-				this.log.info('request done');
+				json: true,
+				function(error, response, content) {
+					this.log.info('request done');
+				}
 			}
 		);
+
 
 		/*
 		For every state in the system there has to be also an object of type state
