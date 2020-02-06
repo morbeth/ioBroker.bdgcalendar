@@ -42,7 +42,7 @@ class BdgCalendar extends utils.Adapter {
 		this.log.info('config city_id: ' + this.config.city_id);
 		this.log.info('config area_id: ' + this.config.area_id);
 
-		request('https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
+		await request('https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
 			{
 				json: true,
 				function(error, response, content) {
