@@ -11,7 +11,7 @@ const utils = require('@iobroker/adapter-core');
 // Load your modules here, e.g.:
 // const fs = require("fs");
 
-class BdgMuell extends utils.Adapter {
+class BdgCalendar extends utils.Adapter {
 
 	/**
 	 * @param {Partial<ioBroker.AdapterOptions>} [options={}]
@@ -39,7 +39,7 @@ class BdgMuell extends utils.Adapter {
 		this.log.info('config area_id: ' + this.config.area_id);
 
 
-		request(
+		new Request(
                         {
                                 url: "https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3",
                                 json: true
@@ -67,11 +67,11 @@ class BdgMuell extends utils.Adapter {
 		});
 
 		await this.setObjectAsync('hausmuell', {
-			type: "state",
+			type: 'state',
 			common: {
-				name: "hausmuell",
-				type: "text",
-				role: "indicator",
+				name: 'hausmuell',
+				type: 'text',
+				role: 'indicator',
 				read: true,
 				write: true
 			},
@@ -171,8 +171,8 @@ if (module.parent) {
 	/**
 	 * @param {Partial<ioBroker.AdapterOptions>} [options={}]
 	 */
-	module.exports = (options) => new BdgMuell(options);
+	module.exports = (options) => new BdgCalendar(options);
 } else {
 	// otherwise start the instance directly
-	new BdgMuell();
+	new BdgCalendar();
 }
