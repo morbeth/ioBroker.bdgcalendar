@@ -148,7 +148,8 @@ class BdgCalendar extends utils.Adapter {
 			},
 			function(error, response, content) {
 				console.info('request done');
-				return response.body;
+				//return response.body;
+				return content;
 			}
 		);
 		this.log.info(result_bdg);
