@@ -18,7 +18,7 @@ class BdgCalendar extends utils.Adapter {
 	 */
 	constructor(options) {
 		super({
-			name: 'bdg_muell',
+			name: 'bdgcalendar',
 		});
 		this.on('ready', this.onReady.bind(this));
 		this.on('objectChange', this.onObjectChange.bind(this));
