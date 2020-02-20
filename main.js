@@ -148,6 +148,7 @@ class BdgCalendar extends utils.Adapter {
 				json: true
 			},
 			function(error, response, content) {
+			log(content,'info');
 				//console.info('request done');
 				//return response.body;
 				return content;
