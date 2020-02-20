@@ -145,9 +145,11 @@ class BdgCalendar extends utils.Adapter {
 		const result_bdg = request('https://bdg.jumomind.com/webservice.php?idx=termins&city_id=180&area_id=78&ws=3',
 			{
 				method: 'get',
+				json: true
 			},
 			function(error, response, content) {
-				console.info('request done');
+				this.log.info(content);
+				//console.info('request done');
 				//return response.body;
 				return content;
 			}
