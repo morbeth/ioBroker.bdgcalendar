@@ -152,7 +152,7 @@ class BdgCalendar extends utils.Adapter {
 				return content;
 			}
 		);
-		this.log.info(result_bdg);
+		this.log.info(JSON.stringify(result_bdg));
 		console.info(result_bdg);
 	}
 
